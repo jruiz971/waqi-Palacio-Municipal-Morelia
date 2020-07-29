@@ -1,0 +1,5 @@
+create database Measurement_Palacio_Municipal_Morelia;
+
+use Measurement_Palacio_Municipal_Morelia;
+
+create table Measurements (latitude VARCHAR(15), longitude VARCHAR(15), name VARCHAR(35), o3 FLOAT(5,2), pm25 FLOAT(5,2), year CHAR(4), month CHAR(2), day CHAR(2), hour CHAR(2), minute CHAR(2), second CHAR(2));
