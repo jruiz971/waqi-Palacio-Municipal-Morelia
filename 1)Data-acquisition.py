@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #--- Download data from server ---#
-response = requests.get("YOUR TOKEN HERE") 
+response = requests.get("https://api.waqi.info/feed/morelia/?token=YOUR-TOKEN-HERE") 
 
 """
 API Token Request Form https://aqicn.org/data-platform/token/#/
