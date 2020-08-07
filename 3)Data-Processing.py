@@ -57,7 +57,6 @@ else:
 #---- PLOT ----#
 x = np.arange(len(hourArray))  # the label locations
 width = 0.35  # the width of the bars
-
 fig, ax = plt.subplots()
 rects1 = ax.bar(x - width/2, o3Array, width, label='Ozone')
 rects2 = ax.bar(x + width/2, pm25Array, width, label='pm2.5')
