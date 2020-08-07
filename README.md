@@ -1,6 +1,6 @@
 # waqi-Palacio-Municipal-Morelia
 #### Air Pollution: Real-time Air Quality Index (AQI)
-![4](https://user-images.githubusercontent.com/38228291/89688935-87852280-d903-11ea-8447-0a15de2b84f1.jpg)
+![a4](https://user-images.githubusercontent.com/38228291/89695098-19e0f280-d913-11ea-86b8-ecfeacdae701.png)
 
 In this project we download information about Morelia air quality, we do request every 2 hours with crontab and save the information on a SQL server.
 - The real time data images can be consulted on: http://132.247.186.67/skadoosh/waqi-Measurements-Palacio-Municipal-Morelia/Images/Morelia,Air-Quality.png
