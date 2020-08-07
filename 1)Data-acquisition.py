@@ -13,15 +13,14 @@ import numpy as np
 
 #--- Download data from server ---#
 response = requests.get("https://api.waqi.info/feed/morelia/?token=YOUR-TOKEN-HERE") 
-
 """
 API Token Request Form https://aqicn.org/data-platform/token/#/
 """
 
 Raw_data = response.json()
+print (Raw_data)
 keys = Raw_data.keys() # ['status','data']
 Raw_data.pop('status') #Clean data
-
 
 #---Gathering information ---#
 latitude,longitude,name = 19.702153, -101.190948,'Palacio Municipal, Morelia, Mexico'
@@ -47,6 +46,8 @@ hour = dt.hour
 minute = dt.minute
 second = dt.second
 
+
+#---Data for the json file ---#
 save_file = {
     'latitude' : latitude,
     'longitude': longitude,
@@ -66,6 +67,7 @@ save_file = {
 
 today = datetime.today().strftime('%Y-%m-%d:%H-%M-%S')
 
+#--- Create the json file ---#
 file_name = "Pollutants_measurements.json"
 with open(file_name,'w') as json_file:
     json.dump(save_file,json_file)
