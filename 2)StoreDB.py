@@ -14,7 +14,7 @@ import json
 import glob
 import subprocess
 
-#Insertion query function with connector and cursor.
+#---Insertion query function with connector and cursor. ---#
 def insertar (data_query):
     try:
         cnx=mysql.connector.connect(**config,auth_plugin='mysql_native_password')
@@ -38,15 +38,19 @@ def insertar (data_query):
 
 
 if __name__ == "__main__":
+    # You need a json file with your db credentials. Here you have to puth the path
     PATHDBCONNECTION= '/home/luis/Documentos/UNAM/CuartoSemestre/ComputoDistribuido/dbconnection/'
+    
     PATHJSONFILE='/home/luis/Documentos/UNAM/CuartoSemestre/ComputoDistribuido/Projects/waqi-Palacio-Municipal-Morelia/'
+    #Here you have to put the path where your json file wit your data to be storaged is
+
     with open(PATHDBCONNECTION+'db.json') as json_file:
             config=json.load(json_file)
     
     for filename in glob.glob(PATHJSONFILE+"*.json"):
-        print(filename)
+        print(filename)  ##Use this to show the path and the file-name.
         
-        real_file =filename[101:] 
+        real_file =filename[101:] #In this vector you have to put where your file name begins, ie, 82
 
         with open(real_file,'r') as f:
             data=json.load(f)
@@ -66,13 +70,5 @@ if __name__ == "__main__":
         data_query = (latitude,longitude, name, o3, pm25, year, month, day, hour, minute, second)
         insertar(data_query)
 
-        # Name = data.get('Name')
-        # MeasurementsValue = data.get('MeasurementsValue')
-        # MeasurementsUnit = data.get('MeasurementsUnit')
-        # MeasurementsPollutant = data.get("MeasurementsPollutant")
-        # Source_id = data.get("Source_id")
-        # for i in range (len(Name)):
-        #     data_query = (Name[i],MeasurementsValue[i],MeasurementsUnit[i],MeasurementsPollutant[i],Source_id[i])
-        #     insertar(data_query)
-                
-    #output = subprocess.run(["mv",filename,PATH+"Backup/"])
+    #--- Move the json file to a backup directory ---#
+    output = subprocess.run(["mv",filename,PATHJSONFILE+"Backup/"])
