@@ -39,20 +39,20 @@ def insertar (data_query):
 
 if __name__ == "__main__":
     # You need a json file with your db credentials. Here you have to puth the path
-    PATHDBCONNECTION= '/home/luis/Documentos/UNAM/CuartoSemestre/ComputoDistribuido/dbconnection/'
+    PATHDBCONNECTION= '/home/vdelaluz/git/waqi-Palacio-Municipal-Morelia/'
     
-    PATHJSONFILE='/home/luis/Documentos/UNAM/CuartoSemestre/ComputoDistribuido/Projects/waqi-Palacio-Municipal-Morelia/'
+    PATHJSONFILE='/home/vdelaluz/git/waqi-Palacio-Municipal-Morelia/'
     #Here you have to put the path where your json file wit your data to be storaged is
 
     with open(PATHDBCONNECTION+'db.json') as json_file:
             config=json.load(json_file)
     
-    for filename in glob.glob(PATHJSONFILE+"*.json"):
+    for filename in glob.glob(PATHJSONFILE+"/Pollutants*.json"):
         print(filename)  ##Use this to show the path and the file-name.
         
-        real_file =filename[101:] #In this vector you have to put where your file name begins, ie, 82
+        #real_file = filename[101:] #In this vector you have to put where your file name begins, ie, 82
 
-        with open(real_file,'r') as f:
+        with open(filename,'r') as f:
             data=json.load(f)
         
         latitude = data.get('latitude')
@@ -70,5 +70,5 @@ if __name__ == "__main__":
         data_query = (latitude,longitude, name, o3, pm25, year, month, day, hour, minute, second)
         insertar(data_query)
 
-    #--- Move the json file to a backup directory ---#
-    output = subprocess.run(["mv",filename,PATHJSONFILE+"Backup/"])
+        #--- Move the json file to a backup directory ---#
+        output = subprocess.run(["mv",filename,PATHJSONFILE+"/backup/"])

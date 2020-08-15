@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #--- Download data from server ---#
-response = requests.get("https://api.waqi.info/feed/morelia/?token=YOUR-TOKEN-HERE") 
+response = requests.get("https://api.waqi.info/feed/morelia/?token=f1074be063d5bca07b78fed20e27e5de01b9847a") 
 """
 API Token Request Form https://aqicn.org/data-platform/token/#/
 """
@@ -29,7 +29,7 @@ aqi = Raw_data['data'].get('aqi') #Real-time air quality infomrmation.
 iaqi = Raw_data['data'].get('iaqi')
 #print(iaqi.keys())
 #dict_keys(['dew', 'h', 'o3', 'p', 'pm25', 't', 'w'])
-o3 = iaqi.get('o3')
+o3 = iaqi.get('no2')
 o3_value = o3.get('v')
 pm25 = iaqi.get('pm25')
 pm25_value = pm25.get('v')

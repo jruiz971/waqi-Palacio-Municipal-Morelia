@@ -16,10 +16,10 @@ import matplotlib.patches as mpatches
 import numpy as np
 from datetime import datetime
 
-PATHDBCONNECTION= '/home/luis/Documentos/UNAM/CuartoSemestre/ComputoDistribuido/dbconnection/'
+PATHDBCONNECTION= '/home/vdelaluz/git/waqi-Palacio-Municipal-Morelia/'
 today = datetime.today()#.strftime('%Y-%m-%d')
 
-with open(PATHDBCONNECTION+'db.json') as json_file:
+with open(PATHDBCONNECTION+'/db.json') as json_file:
     config = json.load(json_file)
 
 o3Array = []; pm25Array = []; hourArray =[]
@@ -87,8 +87,8 @@ autolabel(rects2)
 
 fig.tight_layout()
 
-PATH ='/home/luis/Documentos/UNAM/CuartoSemestre/ComputoDistribuido/Projects/waqi-Palacio-Municipal-Morelia/Plots/'
-plt.savefig(PATH+'Morelia,Air-Quality.png')
+PATH ='/home/vdelaluz/public_html/gicc/static/cursos/2020-II/skadoosh/plots/'
+plt.savefig(PATH+'/morelia-air-quality.png')
 
 
-plt.show()
+#plt.show()
