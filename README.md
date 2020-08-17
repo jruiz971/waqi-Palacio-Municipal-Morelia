@@ -1,4 +1,7 @@
 # waqi-Palacio-Municipal-Morelia
+#### CONTACT:
+- Juan Luis Ruiz Vanegas -> juanluisruiz971@gmail.com
+- Andres Soto Millan -> hoblam500@gmail.com
 #### Air Pollution: Real-time Air Quality Index (AQI)
 ![a4](https://user-images.githubusercontent.com/38228291/89695098-19e0f280-d913-11ea-86b8-ecfeacdae701.png)
 
@@ -6,6 +9,11 @@ In this project we download information about Morelia air quality, we do request
 - The real time data images can be consulted on: http://132.247.186.67/skadoosh/waqi-Measurements-Palacio-Municipal-Morelia/Images/Morelia,Air-Quality.png
 - And the json file:  http://132.247.186.67/skadoosh/waqi-Measurements-Palacio-Municipal-Morelia/json-files/ ;
 
+#### LICENSE
+
+We use the license **"GNU General Public License v3.0"** in this project.
+
+[Link to license](https://github.com/jruiz971/waqi-Palacio-Municipal-Morelia/blob/master/LICENSE)
 
 #### REQUERIMENTS
 
@@ -22,9 +30,11 @@ python3 libraries:
 >> - subprocess
 >> - glob
 
-SQl Server
+#### SQl Server
 - You can dowload following this instructions:
-	
+
+#### DATABASE
+
 
 #### TO RUN THE PROJECT
 - clone the repository---> https://github.com/jruiz971/waqi-Palacio-Municipal-Morelia.git
@@ -37,9 +47,13 @@ that will insert the data on the json file in the SQL Server and close the conne
 - Last but not least, run 3)Data-Processing.py. Again, will open a connection to the SQL Server and will do some queries in order to crea
 te a image of the air pollution.
 
-#### Bibliography
-- [Image](https://www.esa.int/Enabling_Support/Preparing_for_the_Future/Space_for_Earth/Space_for_health/Air_quality_and_pollution)
+#### RESULTS
 
-#### CONTACT:
-- Juan Luis Ruiz Vanegas -> juanluisruiz971@gmail.com
-- Andres Soto Millan -> hoblam500@gmail.com
+- The real time data images can be consulted on: http://132.247.186.67/skadoosh/waqi-Measurements-Palacio-Municipal-Morelia/Images/Morelia,Air-Quality.png
+- And the json file:  http://132.247.186.67/skadoosh/waqi-Measurements-Palacio-Municipal-Morelia/json-files/ ;
+
+
+#### Bibliography
+- [Data and Image](https://aqicn.org/data-platform/token/#/)
+
+
