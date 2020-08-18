@@ -1,4 +1,4 @@
-# waqi-Palacio-Municipal-Morelia
+# waqi
 #### CONTACT:
 - Juan Luis Ruiz Vanegas -> juanluisruiz971@gmail.com
 - Andres Soto Millan -> hoblam500@gmail.com
@@ -7,7 +7,7 @@
 
 In this project we download information about Morelia air quality, we do request every 2 hours with crontab and save the information on a SQL server.
 
-#### OBJECTVIE
+#### OBJECTIVE
 
 Our objective in this project is to collect Data that have the potential to become information to know the state of air quality in the city of Morelia using distributed computing tools and knowledge.
 
